@@ -60,7 +60,7 @@ class JournalStatService
 	}
 
 	/**
-	 * Получит все книги в виде массива [ book_id => title ]
+	 * Получает все книги в виде массива [ book_id => title ]
 	 */
 	private function get_books() {
 		$results = Book::get()->toArray();
@@ -72,7 +72,7 @@ class JournalStatService
 	}
 
 	/**
-	 * Получит данные по месяцам в виде массива [ period => data ]
+	 * Получает данные по месяцам в виде массива [ period => data ]
 	 */
 	private function get_data_by_month() {
 		$results = $this->select_by_month();
@@ -85,7 +85,7 @@ class JournalStatService
 	}
 
 	/**
-	 * Заполнит данные месяца недостающими книгами и вернёт общее количество книг
+	 * Заполняет данные месяца недостающими книгами и вернёт общее количество книг
 	 *
 	 * @param $period string
 	 *
@@ -118,7 +118,7 @@ class JournalStatService
 	}
 
 	/**
-	 * Пройдётся по всем месяцам и заполнит массив недостающими данными
+	 * Проходится по всем месяцам и заполняет массив недостающими данными
 	 */
 	private function handle_data() {
 		$year     = '2017'; // Год начала статистики
@@ -154,7 +154,7 @@ class JournalStatService
 	}
 
 	/**
-	 * Вернёт итоговые данные
+	 * Возвращает итоговые данные
 	 *
 	 * @return array
 	 */
